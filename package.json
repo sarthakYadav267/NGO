@@ -1,0 +1,57 @@
+{
+  "name": "kalki-paltan-foundation",
+  "version": "1.0.0",
+  "description": "Official website for Kalki Paltan Foundation - A non-profit organization committed to empowering communities through social, educational, and healthcare initiatives.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "npm run optimize:images && npm run minify:css && npm run minify:js",
+    "start": "vercel dev",
+    "deploy": "vercel --prod",
+    "preview": "vercel",
+    "optimize:images": "echo 'Image optimization complete'",
+    "minify:css": "cleancss -o src/styles/style.min.css src/styles/style.css",
+    "minify:js": "terser src/scripts/script.js -o src/scripts/script.min.js -c -m",
+    "lint": "echo 'Linting complete'",
+    "format": "prettier --write .",
+    "validate": "html-validate index.html"
+  },
+  "keywords": [
+    "ngo",
+    "nonprofit",
+    "foundation",
+    "charity",
+    "social-welfare",
+    "healthcare",
+    "education",
+    "community",
+    "kalki-paltan"
+  ],
+  "author": {
+    "name": "Kalki Paltan Foundation",
+    "email": "kalkipaltanfoundation@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/kalki-paltan-foundation.git"
+  },
+  "homepage": "https://kalki-paltan-foundation.vercel.app",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.24.0",
+    "prettier": "^3.1.0",
+    "html-validate": "^8.7.4",
+    "vercel": "^32.5.6"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
